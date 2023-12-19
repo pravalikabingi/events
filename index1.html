@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+    <style>
+      
+       
+        table,tr,td,img{
+            padding: 10px;
+            /* border-collapse: collapse; */
+            border-radius: 5px;
+            border:2px solid black
+            
+            
+        }
+        img{
+            width: 130px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: rgb(236, 224, 241);
+
+        }
+        table td {
+            background-color: antiquewhite;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 onclick="alert('hello')">
+        world
+    </h1> -->
+    <!-- ----------------------------------on double click------------------------------------------------------------------------ -->
+    <!-- <h1 ondblclick="alert('hello')">
+        world
+    </h1> -->
+    <!-- ---------------------------------event functions -------------------------------------------------------------- -->
+    <!-- <h1 onclick="hello()">
+        hello world
+    </h1>
+    <script>
+        function hello() {
+            alert("world")
+        }
+    </script> -->
+    <!-- -------------------------------add event listener------------------------------------------------------------------------------- -->
+
+    <!-- <h1>
+        hello
+    </h1>
+    
+    <script>
+       let get=document.getElementsByTagName("h1")
+       console.log(get[0]);
+       get[0].addEventListener("click",hello())
+       function hello() {
+        alert("hello world") 
+       }
+    </script> -->
+
+    <!-- //--------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- <button>click</button>
+    <h1>
+      hello
+    </h1>
+
+    
+
+    <script>
+      let get = document.getElementsByTagName("button");
+      
+      get[0].addEventListener("click", 
+      function hello() {
+        let get1=document.getElementsByTagName("h1")
+        get1[0].style.color="red"
+      }); -->
+    <!-- </script> -->
+
+      <!-- //-------------------------------image change------------------------------------------------------ -->
+
+
+
+      <!-- <img src="https://tse3.mm.bing.net/th?id=OIP._rvm4wZCZUhiLz4NXeV6QAHaLH&pid=Api&P=0&h=180" alt="">
+      <script>
+        let get=document.getElementsByTagName("img")
+        get[0].addEventListener("click",
+        function hello() {
+            let get1=document.getElementsByTagName("img")
+            get1[0].setAttribute("src","https://tse4.mm.bing.net/th?id=OIP.kjzjem2FLmVjd1Yk_WhjhgHaE7&pid=Api&P=0&h=180")
+        })
+         </script> -->
+
+        <!-- ----------------------------------------cart------------------------------------------------------------------ -->
+        <!-- <li></li>
+        <li></li>
+        <li></li>
+        <li></li> -->
+       
+        
+
+        <!-- <button>click to other page</button>
+        <button>click to forward</button>
+
+        <script>
+          let doc=document.getElementsByTagName("button")
+          doc[0].addEventListener("click",()=>{
+            var a=confirm("do u want to visit ?")
+            if (a){
+                window.location.assign("ex.html")
+            }
+          })
+        </script> -->
+    
+
+        <script>
+          let obj=[{"id":1,"title":"iPhone 9","price":109.95,"description":"An apple mobile which is nothing like apple","category":"men's clothing","image":"https://i.dummyjson.com/data/products/1/1.jpg","rating":{"rate":3.9,"count":120}},{"id":2,"title":"iPhone X ","price":22.3,"description":"SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...","category":"men's clothing","image":"https://i.dummyjson.com/data/products/2/1.jpg","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Samsung Universe 9","price":55.99,"description":"Samsung's new variant which goes beyond Galaxy to the Universe","category":"men's clothing","image":"https://i.dummyjson.com/data/products/3/1.jpg","rating":{"rate":4.7,"count":500}},{"id":4,"title":"OPPOF19","price":15.99,"description":"OPPO F19 is officially announced on April 2021.","category":"men's clothing","image":"https://i.dummyjson.com/data/products/4/1.jpg","rating":{"rate":2.1,"count":430}}]
+          
+
+          let tbcre=document.createElement("table")
+          
+          for(i=0;i<obj.length;i++){
+           
+           // let liget1=document.getElementsByTagName("li")
+           // liget1[i].innerText=obj[i].id
+           // let licre=document.createElement("li")
+           // licre.innerText=obj[i].id
+           // console.log(licre);
+           // document.body.append(licre)
+           let trcre=document.createElement("tr")
+           let td1=document.createElement("td")
+            td1.innerText=obj[i].id
+            td1.style.width="40px"
+            trcre.appendChild(td1)
+            let td2=document.createElement("td")
+            td2.innerText=obj[i].title
+            trcre.appendChild(td2)
+            let td3=document.createElement("td")
+            td3.innerText=obj[i].price
+            trcre.appendChild(td3)
+            td3.style.width="80px"
+            let td4=document.createElement("td")
+            td4.innerText=obj[i].description
+            trcre.appendChild(td4)
+           let imgcre=document.createElement("img")
+            imgcre.setAttribute("src",obj[i].image)
+            trcre.appendChild(imgcre)
+            tbcre.appendChild(trcre)
+            document.body.append(tbcre)
+            let td5=document.createElement("td")
+            let button=document.createElement("button")
+            button.innerText="see more"
+            td5.appendChild(button)
+            trcre.appendChild(td5)
+
+            button.addEventListener("click",()=>{
+              window.location.assign("index2.html")
+            })
+
+
+
+
+           
+          
+          
+          
+          
+          
+          
+         
+
+          }
+          </script> 
+      
+     
+  </body>
+</html>
